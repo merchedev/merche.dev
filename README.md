@@ -7,6 +7,11 @@ Este repositorio crea un proyecto en blanco inicial con **NodeJS, Express y Mong
  - ***Añadir*** las ***rutas y controladores*** necesarios en sus respectivas carpetas e ***indicarlo en app.js***.
  - Eliminar o modificar los existentes archivos routes y router-controller
 
+ Para iniciar un nuevo repositorio diferente a partir de este:
+ - Crear el nuevo repositoio en github.
+ - Enlazarlo con el proyecto: `git remote set-url origin url_de_tu_nuevo_repositorio`
+
+
 
 
 ## Para ejecutar la aplicación:
