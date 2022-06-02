@@ -1,0 +1,21 @@
+{
+  "name": "node-express-mongo-project",
+  "version": "1.0.0",
+  "description": "Configurar archivos env dentro de la carpeta Config",
+  "main": "app.js",
+  "scripts": {
+    "start": "export NODE_ENV=development&&nodemon app.js",
+    "prod": "export NODE_ENV=production&&node app.js",
+    "windev": "set NODE_ENV=development&&node app.js",
+    "winprod": "set NODE_ENV=production&&node app.js"
+  },
+  "author": "Merche Sánchez Lereo",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.1",
+    "mongodb": "^4.6.0",
+    "morgan": "^1.10.0"
+  }
+}
