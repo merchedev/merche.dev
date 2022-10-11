@@ -2,16 +2,15 @@
 Este repositorio crea un proyecto en blanco inicial con **NodeJS, Express y MongoDB**, con variables de entorno.
 
 ## Pasos a seguir:
- - `npm install`
+ - Clonar repositorio: `git@github.com:merchedev/nem-init.git`
+ - `npm ci`
  - Configurar archivos ***.env*** dentro de la carpeta ***'/config'***.
- - ***Añadir*** las ***rutas y controladores*** necesarios en sus respectivas carpetas e ***indicarlo en app.js***.
- - Eliminar o modificar los existentes archivos routes y router-controller
+ - Configurar archivo ecosystem (cambiar nombre app)
+ - ***Añadir*** las ***rutas, controladores y validadores*** necesarios en sus respectivas carpetas e ***indicar las rutas en app.js***.
 
  Para iniciar un nuevo repositorio diferente a partir de este:
- - Crear el nuevo repositoio en github.
+ - Crear el nuevo repositorio en github.
  - Enlazarlo con el proyecto: `git remote set-url origin url_de_tu_nuevo_repositorio`
-
-
 
 
 ## Para ejecutar la aplicación:
@@ -20,7 +19,6 @@ Este repositorio crea un proyecto en blanco inicial con **NodeJS, Express y Mong
 
     npm start
 
-
 ### Ejecutar en modo desarrollo (Windows)
 
     npm run windev
@@ -28,7 +26,6 @@ Este repositorio crea un proyecto en blanco inicial con **NodeJS, Express y Mong
 ### Ejecutar en modo producción (Linux/Mac)
 
     npm run prod
-
 
 ### Ejecutar en modo producción (Windows)
 
