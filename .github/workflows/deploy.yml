@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  deployment:
     environment: Production
     runs-on: ubuntu-latest
 
