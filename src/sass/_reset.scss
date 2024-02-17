@@ -1,0 +1,81 @@
+*, *:after, *:before {
+
+    box-sizing: border-box;
+  
+  }
+
+  img , picture , video , iframe , figure{
+    max-width: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color:inherit;
+    font-size:inherit;
+  }
+
+  p a {
+    display: inline;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1 , h2 , h3 , h4 , h5 , h6 , p ,span , a , strong , blockquote , i , b , u , em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color:inherit;
+		font-family: var(--primary-font);
+  }
+
+  blockquote:before, blockquote:after, q:before, q:after {
+      content: '';
+      content: none;
+  }
+  
+  ::selection {
+    background-color: var(--black-color);
+    color: var(--white-color);
+  }
+
+  form , input, textarea, select , button , label{
+      font-family: inherit;
+      font-size: inherit;
+      hyphens: auto;
+      background-color: transparent;
+      color:inherit;
+      display: block;
+      appearance: none;
+      outline:none;
+  }
+
+  table , tr , td {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  svg{
+      width: 100%;
+      display: block;
+      fill: currentColor;
+  }
+
+  body {
+    min-height      : 100vh;
+    font-size       : 100%;
+    font-family     : var(--primary-font);
+    color           : var(--white-color);
+		background-color: var(--primary-color);
+		font-weight:400;
+
+  }

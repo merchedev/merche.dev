@@ -1,5 +1,10 @@
 #Ignorar node_modules de todas las carpetas y subcarpetas#
 **/node_modules
+/tatyc
+**/package-lock.json
+/build
+.env
+
 
 #Archivos a ignorar del sistema operativo#
 **/.DS_Store

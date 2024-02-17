@@ -1,6 +1,6 @@
 module.exports = {
 	apps: [{
-		name: 'merchedev',
+		name: 'staging',
 		script: './app.js',
 		max_memory_restart: '200M',
 		node_args: '--env-file=.env',

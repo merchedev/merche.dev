@@ -1,4 +1,4 @@
-const check_validation = require('./check_validation')
+const check_validation = require('./check_validation');
 
 const { body } = require('express-validator');
 
@@ -7,11 +7,11 @@ const { body } = require('express-validator');
 //? cambiar los métodos body() por query()
 
 const validator_schema = [
-        body('_id')
-          .isMongoId()
-          .withMessage('ID no válida.'),
+	body('_id')
+		.isMongoId()
+		.withMessage('ID no válida.'),
 
-        check_validation
-    ]
+	check_validation
+];
 
-    module.exports = validator_schema;
+module.exports = validator_schema;

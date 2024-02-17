@@ -1,4 +1,4 @@
-const check_validation = require('./check_validation')
+const check_validation = require('./check_validation');
 
 const { body } = require('express-validator');
 
@@ -7,23 +7,23 @@ const { body } = require('express-validator');
 //? cambiar los métodos body() por query()
 
 const validator_schema = [
-        body('_id')
-          .optional()
-          .isMongoId()
-          .withMessage('ID no válida.'),
-        body('nombre')
-          .isLength({ min: 3, max: 10 })
-          .withMessage('El nombre introducido no es válido. Debe tener entre 3 y 10 carácteres'),
+	body('_id')
+		.optional()
+		.isMongoId()
+		.withMessage('ID no válida.'),
+	body('nombre')
+		.isLength({ min: 3, max: 10 })
+		.withMessage('El nombre introducido no es válido. Debe tener entre 3 y 10 carácteres'),
 
-        body('edad')
-          .isInt({ min: 1, max: 120})
-          .withMessage('La edad introducida no es válida. Debe ser un número entre 1 y 120'),
+	body('edad')
+		.isInt({ min: 1, max: 120})
+		.withMessage('La edad introducida no es válida. Debe ser un número entre 1 y 120'),
 
-        body('email')
-          .isEmail()
-          .withMessage('El email introducido no es válido'),
+	body('email')
+		.isEmail()
+		.withMessage('El email introducido no es válido'),
 
-        check_validation
-    ]
+	check_validation
+];
 
-    module.exports = validator_schema;
+module.exports = validator_schema;
