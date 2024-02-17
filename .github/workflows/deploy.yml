@@ -26,12 +26,12 @@ jobs:
       uses: appleboy/ssh-action@v0.1.5
       env:
         USERNAME: ${{secrets.MERXER_USERNAME}}
-        HOST: ${{secrets.HOST}}
-        PORT: ${{secrets.PORT}}
+        HOST_NODE: ${{secrets.HOST}}
+        PORT_NODE: ${{secrets.PORT}}
         DB_NAME: ${{secrets.DB_NAME}}
         DB_HOST: ${{secrets.DB_HOST}}
         BASE: ${{secrets.BASE}}
-        SECRET: ${{secrets.SECRET}}
+        SECRET_DB: ${{secrets.SECRET}}
         SALT_ROUNDS: ${{secrets.SALT_ROUNDS}}
         DIR: ${{secrets.DIR}}
       with:
@@ -40,12 +40,14 @@ jobs:
         password: ${{secrets.MERXER_PASSWORD}}
         envs: USERNAME,HOST,PORT,DB_NAME,DB_HOST,BASE,SECRET,SALT_ROUNDS,DIR
         script: |
+          echo 'Dir environment variable... "${DIR}"'
           if [ ! -d "${DIR}" ];
           then
             sudo mkdir -p "${DIR}"
             sudo chown -R $USER:$USER "${DIR}"
             sudo chmod -R 755 /var/www/*
           fi
+          echo 'User environment variable... "${USER}"'
 
           cd "${DIR}"
           if [ -d .git ]; then
@@ -56,15 +58,17 @@ jobs:
             git clone git@github.com:merchedev/merche.dev.git .
           fi
 
+          echo 'Host environment variable... "${HOST_NODE}"'
+
           if [ ! -f .env ]; then
           cat <<EOT > "${DIR}".env
           NODE_ENV=production
-          HOST="${HOST}"
-          PORT="${PORT}"
+          HOST="${HOST_NODE}"
+          PORT="${PORT_NODE}"
           DB_NAME="${DB_NAME}"
           DB_HOST="${DB_HOST}"
           BASE="${BASE}"
-          SECRET="${SECRET}"
+          SECRET="${SECRET_DB}"
           SALT_ROUNDS="${SALT_ROUND}"
           EOT
           fi
