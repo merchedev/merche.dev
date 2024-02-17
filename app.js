@@ -26,7 +26,7 @@ function bootApp(){
 	app.use(express.urlencoded({ extended: false })); //?Middleware para decodificar el contenido de los parámetros que vengan codificados
 
 	app.use(express.static(path.join(__dirname, '/build')));
-	app.use('/admin', configured, express.static(path.join(__dirname, './tatyc/public/dashboard')));
+	app.use('/admin', configured, express.static(path.join(__dirname, '/tatyc/public/')));
 
 	//*Se definen las rutas de la aplicación
 	const routes = require('./routes/routes');
