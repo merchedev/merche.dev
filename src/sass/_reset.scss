@@ -1,28 +1,13 @@
-*, *:after, *:before {
+	* {
 
     box-sizing: border-box;
   
   }
 
-  img , picture , video , iframe , figure{
+  img , picture{
     max-width: 100%;
     width: 100%;
     display: block;
-  }
-
-  a {
-    display: block;
-    text-decoration: none;
-    color:inherit;
-    font-size:inherit;
-  }
-
-  p a {
-    display: inline;
-  }
-
-  li {
-    list-style-type: none;
   }
 
   html {
@@ -37,44 +22,17 @@
     color:inherit;
 		font-family: var(--primary-font);
   }
-
-  blockquote:before, blockquote:after, q:before, q:after {
-      content: '';
-      content: none;
-  }
   
   ::selection {
-    background-color: var(--black-color);
-    color: var(--white-color);
-  }
-
-  form , input, textarea, select , button , label{
-      font-family: inherit;
-      font-size: inherit;
-      hyphens: auto;
-      background-color: transparent;
-      color:inherit;
-      display: block;
-      appearance: none;
-      outline:none;
-  }
-
-  table , tr , td {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-
-  svg{
-      width: 100%;
-      display: block;
-      fill: currentColor;
+    background-color: var(--white-color);
+    color: var(--black-color);
   }
 
   body {
     min-height      : 100vh;
     font-size       : 100%;
     font-family     : var(--primary-font);
-    color           : var(--white-color);
+    color           : var(--black-color);
 		background-color: var(--primary-color);
 		font-weight:400;
 

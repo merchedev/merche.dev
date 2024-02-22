@@ -1,6 +1,6 @@
 {
   "name": "node-express-mongo-project",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Estado inicial de un proyecto con NodeJS+MongoDB+Express",
   "main": "app.js",
   "scripts": {

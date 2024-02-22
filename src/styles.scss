@@ -1,12 +1,11 @@
-@import 'sass/_variables';
 @import 'sass/_fonts';
+@import 'sass/_variables';
 @import 'sass/_reset';
 
 
 section{
 	max-width: 30em;
-	margin:auto;
-	margin: 5em auto;
+	margin: 5em auto 0 auto;
 	padding:0 1em;
 
 }
@@ -42,4 +41,10 @@ p{
 	font-size:1em;
 	font-weight:400;
 	margin: 0;
+}
+footer{
+	margin-top:5em;
+}
+.version-text{
+	font-size:0.8em;
 }
